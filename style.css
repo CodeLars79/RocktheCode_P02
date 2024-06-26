@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--grey);
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+:root {
+  --black: rgb(24, 24, 24);
+  --grey: rgb(250, 250, 250);
+  --greydark: rgb(224, 224, 224);
+  --font-size-small: 12px;
+  --font-size-base: 18px;
+  --font-size-medium: 32px;
+  --font-size-large: 80px;
+  --spacing-small: 0.5rem; /* 8px */
+  --spacing-medium: 1rem; /* 16px */
+  --spacing-large: 2rem; /* 32px */
+}
+
+header {
+  background-color: var(--grey);
+  color: var(--black);
+  text-align: center;
+  padding: 10px 0;
+  height: 120px;
+  box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-large);
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  max-width: 2000px;
+  width: 100%;
+  margin: auto;
+}
+
+#filterContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 2000px;
+  position: fixed;
+  padding: 50px 0px 50px 0px;
+  top: 120px;
+  background-color: var(--grey);
+  z-index: 50;
+  width: 100%;
+}
+
+#posterContainer {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 200px;
+}
+
+#posterContainer > p {
+  font-size: var(--font-size-medium);
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 100px;
+}
+
+select {
+  font-size: var(--font-size-base);
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--grey);
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+select:hover {
+  background-color: var(--greydark);
+}
+
+label {
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 5px 0px;
+}
+
+#btnReset {
+  font-size: var(--font-size-base);
+  background-color: var(--grey);
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Red Hat Display', sans-serif;
+  border: 1px solid var(--greydark);
+  border-radius: 15px;
+  padding: 5px 20px;
+}
+
+#btnReset:hover {
+  background-color: var(--greydark);
+}
+
+.posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.poster {
+  background-color: var(--grey);
+  width: 350px;
+  text-align: left;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+}
+
+.poster img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.poster h3 {
+  font-size: var(--font-size-medium);
+  margin: 10px 0;
+  color: #333;
+}
+
+.poster p {
+  margin: 5px 0;
+  color: #666;
+  font-size: var(--font-size-base);
+}
+
+footer {
+  background-color: var(--grey);
+  height: 200px;
+  font-size: 20px;
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+footer > p {
+  margin-top: 150px;
+  padding: 50px;
+}
+
+@media (max-width: 650px) {
+  header {
+    height: 50px;
+  }
+
+  header h1 {
+    font-size: 35px;
+  }
+
+  #filterContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: fixed;
+    top: 40px;
+    background-color: var(--grey);
+    z-index: 50;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--greydark);
+  }
+
+  .poster {
+    width: 300px;
+  }
+
+  #posterContainer {
+    margin-top: 170px;
+  }
+
+  #posterContainer > p {
+    font-size: 26px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 0px 50px;
+  }
+
+  .poster p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+  }
+
+  select,
+  label,
+  #btnReset {
+    font-size: var(--font-size-small);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
